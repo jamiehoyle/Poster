@@ -2,14 +2,17 @@
 //  VKAppDelegate.h
 //  Poster
 //
-//  Created by Ross Penman on 26/09/2013.
+//  Created by Ross Penman on 25/09/2013.
 //  Copyright (c) 2013 Ross Penman. All rights reserved.
 //
 
+#import "VKPanelController.h"
 #import <Cocoa/Cocoa.h>
 
-@interface VKAppDelegate : NSObject <NSApplicationDelegate>
+@class VKPanelController;
+@interface VKAppDelegate : NSObject <NSApplicationDelegate, VKPanelControllerDelegate>
 
-@property (assign) IBOutlet NSWindow *window;
+@property (nonatomic, strong) NSStatusItem *statusItem;
+@property (nonatomic, strong) VKPanelController *panelController;
 
 @end
